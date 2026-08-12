@@ -104,3 +104,24 @@ After downloading the package, verify that the file is available on the Ubuntu s
 ```bash
 ls -lh splunk-10.4.2-33c3bf42cd73-linux-amd64.deb
 ```
+
+
+## 4. Install Splunk
+
+Install the downloaded Splunk Enterprise Debian package using `dpkg`.
+
+### Install the DEB Package
+
+```bash
+sudo dpkg -i ~/splunk-10.4.2-33c3bf42cd73-linux-amd64.deb
+```
+
+![Splunk Installation](images/06-splunk-installation.png)
+
+The Splunk Enterprise package was successfully installed.
+
+The default installation directory is:
+
+```text
+/opt/splunk
+```
