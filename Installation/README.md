@@ -41,3 +41,12 @@ cat /etc/os-release
 ```
 ![Ubuntu Version](images/01-ubuntu-version.png)
 
+### System Architecture
+
+Verify the system architecture:
+
+```bash
+uname -m
+```
+
+![System Architecture](images/02-system-architecture.png)
