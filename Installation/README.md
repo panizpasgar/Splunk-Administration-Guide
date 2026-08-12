@@ -85,20 +85,22 @@ curl --version
 
 ## 3. Download Splunk
 
-Splunk Enterprise provides different installation packages for Linux.
+Splunk Enterprise 10.4.2 is used in this guide.
 
-For Ubuntu Server, the Debian (`.deb`) package is used in this guide.
+For Ubuntu Server 24.04.3 LTS, the Debian (`.deb`) package for Linux x86-64 is used.
 
 ### Download the Splunk Enterprise Package
 
-Log in to your Splunk account and download the latest available Splunk Enterprise `.deb` package for Linux x86-64.
+Download the following Splunk Enterprise package:
+
+```text
+splunk-10.4.2-33c3bf42cd73-linux-amd64.deb
+```
 
 ![Splunk Download](images/05-splunk-download.png)
 
-The downloaded package should have a filename similar to:
+After downloading the package, verify that the file is available on the Ubuntu server.
 
-```text
-splunk-<version>-<build>-Linux-amd64.deb
+```bash
+ls -lh splunk-10.4.2-33c3bf42cd73-linux-amd64.deb
 ```
-
-The package can then be transferred to the Ubuntu server.
