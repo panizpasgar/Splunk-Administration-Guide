@@ -38,6 +38,6 @@ Verify the operating system version:
 ```bash
 cat /etc/os-release
 
-```markdown
+```
 ![Ubuntu Version](images/01-ubuntu-version.png)
 
