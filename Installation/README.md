@@ -64,3 +64,41 @@ sudo apt update
 ```
 
 ![APT Update](images/03-apt-update.png)
+
+### Install Required Utilities
+
+Install `wget` and `curl` to download and transfer files during the installation process.
+
+```bash
+sudo apt install wget curl -y
+```
+
+Verify the installation:
+
+```bash
+wget --version
+curl --version
+```
+
+![Install Wget and Curl](images/04-install-wget-curl.png)
+---
+
+## 3. Download Splunk
+
+Splunk Enterprise provides different installation packages for Linux.
+
+For Ubuntu Server, the Debian (`.deb`) package is used in this guide.
+
+### Download the Splunk Enterprise Package
+
+Log in to your Splunk account and download the latest available Splunk Enterprise `.deb` package for Linux x86-64.
+
+![Splunk Download](images/05-splunk-download.png)
+
+The downloaded package should have a filename similar to:
+
+```text
+splunk-<version>-<build>-Linux-amd64.deb
+```
+
+The package can then be transferred to the Ubuntu server.
