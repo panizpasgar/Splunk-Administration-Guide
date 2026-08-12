@@ -4,12 +4,12 @@ This guide provides a step-by-step procedure for installing and configuring Splu
 
 ## Environment
 
-| Component | Version |
-|---|---|
-| Operating System | Ubuntu Server 24.04.3 LTS |
-| Architecture | amd64 |
-| Splunk | Splunk Enterprise |
-| Installation Type | Single Instance |
+| Component         | Version                   |
+| ----------------- | ------------------------- |
+| Operating System  | Ubuntu Server 24.04.3 LTS |
+| Architecture      | amd64                     |
+| Splunk            | Splunk Enterprise         |
+| Installation Type | Single Instance           |
 
 ## Installation Steps
 
@@ -27,17 +27,13 @@ This guide provides a step-by-step procedure for installing and configuring Splu
 
 ## 1. Prerequisites
 
-Before installing Splunk Enterprise, verify that the server meets the required specifications.
+Before installing Splunk Enterprise, verify that the server meets the required prerequisites.
 
-### Server Specifications
+### Operating System
 
-- Ubuntu Server 24.04.3 LTS
-- 64-bit AMD64 architecture
-- Static IP address
-- Internet access
-- Sufficient CPU, RAM and disk resources
+This guide is based on Ubuntu Server 24.04.3 LTS.
 
-### Verify Operating System
+Verify the operating system version:
 
 ```bash
 cat /etc/os-release
