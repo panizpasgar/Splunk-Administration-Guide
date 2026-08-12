@@ -50,3 +50,17 @@ uname -m
 ```
 
 ![System Architecture](images/02-system-architecture.png)
+
+## 2. Operating System Preparation
+
+Before installing Splunk Enterprise, update the Ubuntu package repository.
+
+### Update Package Repository
+
+Run the following command:
+
+```bash
+sudo apt update
+```
+
+![APT Update](images/03-apt-update.png)
