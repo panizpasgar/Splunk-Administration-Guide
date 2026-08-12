@@ -11,6 +11,7 @@ This guide provides a step-by-step procedure for installing and configuring Splu
 | Splunk            | Splunk Enterprise         |
 | Installation Type | Single Instance           |
 
+
 ## Installation Steps
 
 1. [Prerequisites](#1-prerequisites)
