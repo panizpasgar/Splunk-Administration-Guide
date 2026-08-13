@@ -211,3 +211,17 @@ Navigate to:
 This section provides access to general Splunk server configuration settings, including the server name, management port, and Web port.
 
 ![Server General Settings](images/11-server-general-settings.png)
+
+### Monitoring Console
+
+The Monitoring Console provides detailed information about the performance and health of the Splunk Enterprise instance.
+
+For a single-instance deployment, the Monitoring Console can be used in standalone mode to monitor the local Splunk instance.
+
+Navigate to:
+
+**Settings → Monitoring Console → Settings → General Setup**
+
+![Monitoring Console General Setup](images/12-monitoring-console-general-setup.png)
+
+> **Note:** For a single-instance deployment, keep the Monitoring Console in standalone mode. Distributed mode is intended for monitoring multiple Splunk Enterprise instances.
