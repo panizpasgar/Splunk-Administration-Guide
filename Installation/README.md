@@ -189,3 +189,19 @@ The default port for Splunk Web is **8000**.
 Use the administrator username and password created during the first startup of Splunk Enterprise.
 
 > **Note:** The Splunk Web interface uses HTTPS by default. In a lab environment, the browser may display a certificate warning because Splunk uses a self-signed certificate by default.
+
+### Splunk Web Dashboard
+
+After successfully logging in, the Splunk Enterprise home dashboard is displayed.
+
+![Splunk Dashboard](images/10-splunk-dashboard.png)
+
+### Server General Settings
+
+To view the general configuration settings of the Splunk instance, navigate to:
+
+**Settings → Server settings → General settings**
+
+This section contains important configuration settings such as the Splunk server name, management port, and Splunk Web port. The default Splunk Web port is **8000**, while the default management port is **8089**. :contentReference[oaicite:0]{index=0}
+
+![Server General Settings](images/11-server-general-settings.png)
