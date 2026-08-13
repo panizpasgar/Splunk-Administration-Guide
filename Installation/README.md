@@ -196,12 +196,18 @@ After successfully logging in, the Splunk Enterprise home dashboard is displayed
 
 ![Splunk Dashboard](images/10-splunk-dashboard.png)
 
+---
+
+## 8. Initial Configuration
+
+After accessing Splunk Web for the first time, review the general configuration settings of the Splunk instance.
+
 ### Server General Settings
 
-To view the general configuration settings of the Splunk instance, navigate to:
+Navigate to:
 
 **Settings → Server settings → General settings**
 
-This section contains important configuration settings such as the Splunk server name, management port, and Splunk Web port. The default Splunk Web port is **8000**, while the default management port is **8089**. :contentReference[oaicite:0]{index=0}
+This section provides access to general Splunk server configuration settings, including the server name, management port, and Web port.
 
 ![Server General Settings](images/11-server-general-settings.png)
