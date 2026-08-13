@@ -129,8 +129,6 @@ The default installation directory is:
 
 ---
 
----
-
 ## 5. Start Splunk
 
 Before starting Splunk Enterprise, make sure the Splunk installation directory is owned by the dedicated `splunk` user.
@@ -176,21 +174,72 @@ After accepting the license agreement, you will be prompted to create an adminis
 ![Splunk Start](images/07-splunk-start.png)
 ---
 
+---
+
 ## 6. Enable Splunk at Boot
 
-To start Splunk automatically when the operating system boots, enable the Splunk boot-start configuration.
+To start Splunk automatically when the operating system boots, create a systemd service for Splunk Enterprise.
 
-### Enable Boot Start
+### Create the Splunk Systemd Service
 
-Run the following command:
+Create the following service file:
 
 ```bash
-sudo /opt/splunk/bin/splunk enable boot-start
+sudo nano /etc/systemd/system/splunk.service
 ```
 
-![Enable Splunk Boot Start](images/08-splunk-boot-start.png)
+Add the following configuration:
 
+```ini
+[Unit]
+Description=Splunk Enterprise
+After=network-online.target
+Wants=network-online.target
 
+[Service]
+Type=forking
+User=splunk
+Group=splunk
+ExecStart=/opt/splunk/bin/splunk start --no-prompt
+ExecStop=/opt/splunk/bin/splunk stop
+ExecReload=/opt/splunk/bin/splunk restart
+Restart=on-failure
+TimeoutStartSec=300
+TimeoutStopSec=300
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Save the file and reload the systemd configuration:
+
+```bash
+sudo systemctl daemon-reload
+```
+
+### Enable Splunk at Boot
+
+Enable the Splunk service to start automatically at system boot:
+
+```bash
+sudo systemctl enable splunk
+```
+
+Start the service:
+
+```bash
+sudo systemctl start splunk
+```
+
+Verify the service status:
+
+```bash
+sudo systemctl status splunk
+```
+
+![Splunk Boot Start](images/08-splunk-boot-start.png)
+
+> **Note:** A custom systemd service is used to run Splunk under the dedicated `splunk` user and ensure that Splunk starts automatically after system reboot.
 ---
 
 ## 7. Access Splunk Web
