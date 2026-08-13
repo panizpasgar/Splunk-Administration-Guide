@@ -140,3 +140,5 @@ sudo /opt/splunk/bin/splunk start --run-as-root
 During the first startup, accept the Splunk Enterprise License Agreement and create the administrator account.
 
 ![Splunk Start](images/07-splunk-start.png)
+
+> **Note:** Running Splunk Enterprise as root is deprecated. The `--run-as-root` option is used in this guide for this lab environment to avoid permission-related issues during the installation process. For production environments, running Splunk under a dedicated non-root user is recommended.
