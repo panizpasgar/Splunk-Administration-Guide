@@ -129,12 +129,42 @@ The default installation directory is:
 
 ---
 
+---
+
 ## 5. Start Splunk
 
-After installing Splunk Enterprise, start Splunk using the following command:
+Before starting Splunk Enterprise, make sure the Splunk installation directory is owned by the dedicated `splunk` user.
+
+### Configure Splunk Permissions
+
+Run the following command:
 
 ```bash
-sudo /opt/splunk/bin/splunk start --run-as-root
+sudo chown -R splunk:splunk /opt/splunk
+```
+
+This assigns ownership of the Splunk installation directory to the `splunk` user and group.
+
+Verify the ownership:
+
+```bash
+ls -ld /opt/splunk
+```
+
+The output should show `splunk splunk` as the owner and group.
+
+### Start Splunk
+
+Switch to the `splunk` user:
+
+```bash
+sudo -u splunk -i
+```
+
+Then start Splunk:
+
+```bash
+/opt/splunk/bin/splunk start
 ```
 
 During the first startup, accept the Splunk Enterprise License Agreement.
@@ -144,9 +174,6 @@ After accepting the license agreement, you will be prompted to create an adminis
 > **Note:** The username and password created during the first startup will be used to log in to the Splunk Web interface. Keep these credentials secure and do not share or commit them to the repository.
 
 ![Splunk Start](images/07-splunk-start.png)
-
-> **Note:** Running Splunk Enterprise as root is deprecated. The `--run-as-root` option is used in this guide for this lab environment to avoid permission-related issues during the installation process. For production environments, running Splunk under a dedicated non-root user is recommended.
-
 ---
 
 ## 6. Enable Splunk at Boot
