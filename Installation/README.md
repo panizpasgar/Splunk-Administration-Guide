@@ -146,3 +146,19 @@ After accepting the license agreement, you will be prompted to create an adminis
 ![Splunk Start](images/07-splunk-start.png)
 
 > **Note:** Running Splunk Enterprise as root is deprecated. The `--run-as-root` option is used in this guide for this lab environment to avoid permission-related issues during the installation process. For production environments, running Splunk under a dedicated non-root user is recommended.
+
+---
+
+## 6. Enable Splunk at Boot
+
+To start Splunk automatically when the operating system boots, enable the Splunk boot-start configuration.
+
+### Enable Boot Start
+
+Run the following command:
+
+```bash
+sudo /opt/splunk/bin/splunk enable boot-start
+```
+
+![Enable Splunk Boot Start](images/08-splunk-boot-start.png)
