@@ -225,3 +225,40 @@ Navigate to:
 ![Monitoring Console General Setup](images/12-monitoring-console-general-setup.png)
 
 > **Note:** For a single-instance deployment, keep the Monitoring Console in standalone mode. Distributed mode is intended for monitoring multiple Splunk Enterprise instances.
+
+
+---
+
+## 9. Verify Installation
+
+After completing the installation and initial configuration, verify that Splunk Enterprise is running correctly.
+
+### Check Splunk Service Status
+
+Run the following command:
+
+```bash
+sudo /opt/splunk/bin/splunk status
+```
+
+A successful installation should show that the Splunk services are running.
+
+![Splunk Status](images/13-splunk-status.png)
+
+### Verify Splunk Version
+
+Check the installed Splunk Enterprise version:
+
+```bash
+/opt/splunk/bin/splunk version
+```
+
+The installed version should be:
+
+```text
+10.4.2
+```
+
+![Splunk Version](images/14-splunk-version.png)
+
+The Splunk Enterprise installation is now complete and the instance is ready for further configuration.
