@@ -137,7 +137,11 @@ After installing Splunk Enterprise, start Splunk using the following command:
 sudo /opt/splunk/bin/splunk start --run-as-root
 ```
 
-During the first startup, accept the Splunk Enterprise License Agreement and create the administrator account.
+During the first startup, accept the Splunk Enterprise License Agreement.
+
+After accepting the license agreement, you will be prompted to create an administrator username and password for Splunk.
+
+> **Note:** The username and password created during the first startup will be used to log in to the Splunk Web interface. Keep these credentials secure and do not share or commit them to the repository.
 
 ![Splunk Start](images/07-splunk-start.png)
 
