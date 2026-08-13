@@ -162,3 +162,30 @@ sudo /opt/splunk/bin/splunk enable boot-start
 ```
 
 ![Enable Splunk Boot Start](images/08-splunk-boot-start.png)
+
+
+---
+
+## 7. Access Splunk Web
+
+After starting Splunk Enterprise, access the Splunk Web interface using a web browser.
+
+### Access Splunk Web
+
+Open a web browser and navigate to:
+
+```text
+https://<SPLUNK-SERVER-IP>:8000
+```
+
+Replace `<SPLUNK-SERVER-IP>` with the IP address of the Splunk instance.
+
+The default port for Splunk Web is **8000**.
+
+![Splunk Web Login](images/09-splunk-web-login.png)
+
+### Log in to Splunk Web
+
+Use the administrator username and password created during the first startup of Splunk Enterprise.
+
+> **Note:** The Splunk Web interface uses HTTPS by default. In a lab environment, the browser may display a certificate warning because Splunk uses a self-signed certificate by default.
