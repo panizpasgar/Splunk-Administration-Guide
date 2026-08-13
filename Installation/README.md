@@ -126,3 +126,17 @@ The default installation directory is:
 ```text
 /opt/splunk
 ```
+
+---
+
+## 5. Start Splunk
+
+After installing Splunk Enterprise, start Splunk using the following command:
+
+```bash
+sudo /opt/splunk/bin/splunk start --run-as-root
+```
+
+During the first startup, accept the Splunk Enterprise License Agreement and create the administrator account.
+
+![Splunk Start](images/07-splunk-start.png)
