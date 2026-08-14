@@ -45,3 +45,19 @@ The **Management port (8089)** is used for management and communication between 
 ![Splunk Ports](images/02-ports.png)
 
 > **Note:** The default ports can be changed according to the deployment requirements. If the ports are changed, make sure the required ports are allowed through the host firewall and any network security controls.
+
+### Server Name
+
+The **Server Name** identifies the Splunk Enterprise instance.
+
+The Server Name can be viewed from:
+
+**Settings → Server settings → General settings**
+
+In this instance, the configured Server Name is:
+
+```text
+splunk
+```
+
+> **Note:** The Server Name should be unique within a Splunk deployment, especially when multiple Splunk instances are communicating with each other.
