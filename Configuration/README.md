@@ -26,3 +26,22 @@ To access the general server settings, navigate to:
 This section provides access to general settings such as the Splunk server name, Web port, management port, and other instance-level configuration options.
 
 > **Note:** Configuration options may vary depending on the Splunk Enterprise version and deployment type.
+
+### Splunk Web and Management Ports
+
+Splunk Enterprise uses different ports for Web access and internal management communication.
+
+The default ports are:
+
+| Port | Purpose |
+|---|---|
+| `8000` | Splunk Web |
+| `8089` | Splunk Management |
+
+The **Splunk Web port (8000)** is used to access the Splunk Web interface through a browser.
+
+The **Management port (8089)** is used for management and communication between Splunk components.
+
+![Splunk Ports](images/02-ports.png)
+
+> **Note:** The default ports can be changed according to the deployment requirements. If the ports are changed, make sure the required ports are allowed through the host firewall and any network security controls.
