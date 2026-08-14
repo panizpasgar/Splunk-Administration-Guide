@@ -65,6 +65,8 @@ Example output:
 Web port: 8000
 ```
 
+![Splunk Web Port](images/02-web-port.png)
+
 > **Note:** The Splunk Web port can be changed according to the deployment requirements. If the port is changed, make sure the new port is allowed through the host firewall and any applicable network security controls.
 
 ### 2.2 Splunk Management Port
@@ -84,9 +86,28 @@ Example output:
 ```text
 Splunkd port: 8089
 ```
-![Splunk Web and Management Ports](images/02-ports.png)
+
+![Splunk Management Port](images/03-management-port.png)
 
 > **Note:** The management port should not be exposed unnecessarily to untrusted networks.
+
+
+
+### CLI Certificate Warning
+
+When running Splunk CLI commands, a warning related to SSL certificate hostname validation may be displayed:
+
+```text
+WARNING: Server Certificate Hostname Validation is disabled.
+Please see server.conf/[sslConfig]/cliVerifyServerName for details.
+```
+
+This warning indicates that SSL certificate hostname validation is currently disabled for Splunk CLI connections. It does not prevent the command from executing successfully.
+
+The setting can be configured using `cliVerifyServerName` in the `[sslConfig]` stanza of `server.conf`.
+
+
+
 
 ### 2.3 Server Configuration File
 
@@ -107,7 +128,7 @@ serverName = splunk
 
 The `server.conf` file contains various server-level settings that control the behavior and configuration of the Splunk instance.
 
-![Server Configuration](images/03-server-conf.png)
+![Server Configuration](images/04-server-conf.png)
 
 > **Note:** Do not modify sensitive configuration values unless you understand their purpose and the impact of the change. It is recommended to back up configuration files before making manual changes.
 
